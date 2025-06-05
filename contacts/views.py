@@ -2,13 +2,16 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Contact
 from cars.models import Car
+from django.contrib.auth.decorators import login_required, user_passes_test
 # from django.core.mail import send_mail
 # from django.contrib.auth.models import User
-
 
 # Create your views here.
 def inquiry(request):
     if request.method == 'POST':
+        if request.user.is_superuser:
+            messages.error(request, 'Admin users cannot book cars.')
+            return redirect('/cars/' + request.POST.get('car_id', ''))
         car_id = request.POST['car_id']
         car_title = request.POST['car_title']
         user_id = request.POST['user_id']
