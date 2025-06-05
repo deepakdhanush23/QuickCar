@@ -21,3 +21,5 @@ requests-oauthlib
 sqlparse
 urllib3
 whitenoise
+uvicorn          # Only if you're using ASGI
+
