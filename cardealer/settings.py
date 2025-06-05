@@ -177,3 +177,6 @@ SITE_ID = 1
 
 # Whitenoise settings
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'quickcar.onrender.com']
+
