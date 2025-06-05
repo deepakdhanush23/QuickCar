@@ -10,7 +10,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 def inquiry(request):
     if request.method == 'POST':
         if request.user.is_superuser:
-            messages.error(request, 'Admin users cannot book cars.')
+            messages.error(request, 'Admin cannot book cars.')
             return redirect('/cars/' + request.POST.get('car_id', ''))
         car_id = request.POST['car_id']
         car_title = request.POST['car_title']

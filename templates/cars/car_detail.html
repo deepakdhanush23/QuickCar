@@ -240,7 +240,7 @@
 
                               <input type="hidden" name="car_id" value="{{single_car.id}}">
                                 <div class="form-group">
-                                  <label for="name" class="col-form-label">Hello, My Name is</label>
+                                  <label for="name" class="col-form-label">Name</label>
                                   <div class="row">
                                     <div class="col">
                                       <input type="text" name="first_name" class="form-control" placeholder="First Name"
@@ -252,17 +252,6 @@
                                     </div>
                                   </div>
                                 </div>
-                                  <div class="form-group">
-                                      <select class="form-control" id="sel1" name="customer_need">
-                                        <option value="I'm interested in this">I'm interested in this</option>
-                                        <option value="I'd like to know your best price for this">I'd like to know your best price for this</option>
-                                        <option value="I'd like to Schedule a Test Drive">I'd like to Schedule a Test Drive</option>
-                                        <option value="Check home delivery options">Check home delivery options</option>
-                                        <option value="I'd like a history report for this">I'd like a history report for this</option>
-                                        <option value="Discuss Financing">Discuss Financing</option>
-                                        <option value="Others [Mention Below]">Others [Mention Below]</option>
-                                      </select>
-                                    </div>
 									<!-- Log on to codeastro.com for more projects -->
                                 <div class="form-group">
                                   <input type="text" name="car_title" class="form-control" value="{{ single_car.car_title }}" readonly>
@@ -283,12 +272,12 @@
                                 <div class="form-group">
                                   <div class="row">
                                     <div class="col">
-                                        <label for="name" class="col-form-label">You can reach me by email at</label>
+                                        <label for="name" class="col-form-label">Email</label>
                                       <input type="email" name="email" class="form-control" placeholder="Email Address"
                                        {% if user.is_authenticated %} value="{{user.email}}"  {% endif %} required>
                                     </div>
                                     <div class="col">
-                                        <label for="phone" class="col-form-label">or by cell at</label>
+                                        <label for="phone" class="col-form-label">Phone</label>
                                       <input type="text" name="phone" placeholder="Phone Number (optional)" class="form-control">
                                     </div>
                                   </div>
